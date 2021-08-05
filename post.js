@@ -30,9 +30,13 @@ app.post('/post-test', (req, res) => {
 
     // console.log('data:', data);
     
-    axios.post(url, {
+    axios.post(url, data, {
 
-        data
+        headers: {
+
+            'Content-Type': 'application/json',
+  
+        }
     
     })
     .then(resp => {
